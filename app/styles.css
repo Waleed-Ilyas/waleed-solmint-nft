@@ -1,0 +1,897 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=DM+Mono:wght@400;500&display=swap");
+:root {
+  --ink: #292a2e;
+  --muted: #888992;
+  --line: #e9e9ed;
+  --wash: #f7f7f9;
+  --purple: #7060ad;
+  --paper: #fff;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--ink);
+  font:
+    13px/1.5 "DM Sans",
+    sans-serif;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+.mint-app {
+  min-height: 100vh;
+}
+.mint-header {
+  height: 62px;
+  max-width: 1180px;
+  padding: 0 27px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  border-bottom: 1px solid var(--line);
+}
+.mint-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #383940;
+  font:
+    600 10px "DM Mono",
+    monospace;
+  letter-spacing: 1.1px;
+}
+.mint-brand span {
+  color: #7263b2;
+  font-size: 18px;
+}
+.mint-header nav {
+  height: 100%;
+  display: flex;
+  gap: 20px;
+}
+.mint-header nav button {
+  position: relative;
+  border: 0;
+  background: none;
+  color: #7d7e87;
+  font-size: 9px;
+}
+.mint-header nav button.nav-active {
+  color: #5e508e;
+}
+.mint-header nav button.nav-active:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #7464ae;
+}
+.mint-search {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: auto;
+  color: #9697a0;
+  font-size: 16px;
+}
+.mint-search input {
+  width: 145px;
+  border: 0;
+  outline: 0;
+  font-size: 9px;
+}
+.mint-search input::placeholder {
+  color: #a4a5ac;
+}
+.connect-button {
+  padding: 8px 11px;
+  border: 1px solid #d9d4e8;
+  border-radius: 4px;
+  background: #f9f8fc;
+  color: #655795;
+  font-size: 8px;
+}
+.connect-button span {
+  margin-left: 8px;
+}
+.chain-disclosure {
+  max-width: 1126px;
+  margin: 13px auto 0;
+  padding: 8px 11px;
+  border: 1px solid #ece9f3;
+  border-radius: 3px;
+  background: #f7f6fa;
+  color: #797783;
+  font-size: 8px;
+}
+.chain-disclosure span {
+  margin-right: 8px;
+  color: #69599b;
+  font:
+    7px "DM Mono",
+    monospace;
+  letter-spacing: 0.7px;
+}
+.mint-hero {
+  max-width: 1126px;
+  height: 295px;
+  margin: 13px auto 0;
+  padding: 35px 42px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: #f2f0eb;
+  overflow: hidden;
+}
+.mint-eyebrow {
+  font:
+    8px "DM Mono",
+    monospace;
+  letter-spacing: 1px;
+  color: #85857e;
+}
+.mint-hero h1 {
+  margin: 14px 0 9px;
+  font:
+    500 clamp(37px, 4.5vw, 54px)/1.04 "Playfair Display",
+    Georgia,
+    serif;
+  letter-spacing: -1.3px;
+}
+.mint-hero h1 em {
+  color: #7466a4;
+  font-weight: 500;
+}
+.mint-hero p {
+  max-width: 345px;
+  color: #7d7e77;
+  font-size: 10px;
+  line-height: 1.8;
+}
+.mint-hero > div:first-child > button {
+  margin-top: 10px;
+  padding: 9px 12px;
+  border: 0;
+  border-radius: 3px;
+  background: #645590;
+  color: white;
+  font-size: 8px;
+}
+.mint-hero > div:first-child > button span {
+  margin-left: 15px;
+}
+.hero-art {
+  height: 245px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  color: #7163a2;
+}
+.hero-orbit {
+  position: absolute;
+  width: 195px;
+  height: 195px;
+  border: 1px solid #8274af66;
+  border-radius: 50%;
+}
+.orbit-b {
+  width: 235px;
+  height: 95px;
+  transform: rotate(38deg);
+  border-color: #7c9b8a88;
+}
+.hero-sun {
+  position: relative;
+  width: 71px;
+  height: 71px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #705fa8;
+  color: #f2df9d;
+  font-size: 31px;
+  box-shadow: 0 10px 40px #65569455;
+}
+.hero-art > span {
+  position: absolute;
+  right: 9px;
+  bottom: 11px;
+  font:
+    7px "DM Mono",
+    monospace;
+  letter-spacing: 1px;
+  color: #88877e;
+}
+.collection-strip {
+  max-width: 1042px;
+  min-height: 62px;
+  margin: 16px auto 0;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+.collection-strip > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex: 1;
+}
+.collection-icon {
+  width: 33px;
+  height: 33px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #eeebf7;
+  color: #7465ae;
+  font-size: 18px;
+}
+.collection-strip > div > span:last-child {
+  display: grid;
+  gap: 2px;
+}
+.collection-strip small {
+  color: #999aa1;
+  font:
+    7px "DM Mono",
+    monospace;
+  letter-spacing: 0.5px;
+}
+.collection-strip b {
+  font-size: 9px;
+  font-weight: 600;
+}
+.collection-strip > span {
+  color: #767780;
+  font-size: 8px;
+}
+.collection-strip > span small {
+  margin-left: 4px;
+  font:
+    7px "DM Sans",
+    sans-serif;
+}
+.collection-strip > span b {
+  margin-left: 4px;
+  color: #55565e;
+  font-size: 8px;
+}
+.collection-strip > button {
+  border: 0;
+  background: none;
+  color: #7060a6;
+  font-size: 8px;
+  white-space: nowrap;
+}
+.market-section {
+  max-width: 1042px;
+  margin: 37px auto 0;
+  padding: 0 2px 45px;
+}
+.market-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+.market-heading h2 {
+  margin: 6px 0 0;
+  font:
+    500 24px "Playfair Display",
+    Georgia,
+    serif;
+}
+.create-button {
+  padding: 8px 10px;
+  border: 1px solid #dcd7eb;
+  border-radius: 4px;
+  background: white;
+  color: #675898;
+  font-size: 13px;
+}
+.create-button span {
+  margin-left: 5px;
+  font-size: 8px;
+}
+.market-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 0 13px;
+  border-bottom: 1px solid var(--line);
+}
+.category-tabs {
+  display: flex;
+  gap: 17px;
+}
+.category-tabs button {
+  position: relative;
+  padding: 9px 0;
+  border: 0;
+  background: none;
+  color: #8a8b93;
+  font-size: 8px;
+}
+.category-tabs button.category-active {
+  color: #62528f;
+}
+.category-tabs button.category-active:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #7464aa;
+}
+.sort-select {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #999aa2;
+  font-size: 7px;
+}
+.sort-select select {
+  border: 0;
+  background: white;
+  color: #696a72;
+  font-size: 8px;
+  outline: 0;
+}
+.nft-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 13px;
+}
+.nft-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: white;
+}
+.nft-art {
+  width: 100%;
+  height: 174px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  border: 0;
+  overflow: hidden;
+}
+.nft-art > span {
+  font:
+    66px "Playfair Display",
+    Georgia,
+    serif;
+  transition: transform 0.3s;
+}
+.nft-art:hover > span {
+  transform: scale(1.12) rotate(-5deg);
+}
+.nft-art small {
+  position: absolute;
+  left: 10px;
+  top: 9px;
+  font:
+    6px "DM Mono",
+    monospace;
+  letter-spacing: 0.7px;
+  opacity: 0.7;
+}
+.nft-art b {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font:
+    7px "DM Mono",
+    monospace;
+  opacity: 0.6;
+}
+.art-violet {
+  background: radial-gradient(circle at 48% 48%, #e9e3f7, #cfc4e9);
+  color: #665394;
+}
+.art-green {
+  background: radial-gradient(circle at 45% 40%, #eff1de, #b5d1bb);
+  color: #547e69;
+}
+.art-blue {
+  background: radial-gradient(circle at 50% 45%, #e0edf1, #a8c7d1);
+  color: #477b87;
+}
+.art-orange {
+  background: radial-gradient(circle at 50% 45%, #f8e6d1, #e8b68d);
+  color: #a76e4f;
+}
+.art-pink {
+  background: radial-gradient(circle at 48% 46%, #f2e3ee, #ddb9d7);
+  color: #9b678d;
+}
+.art-gold {
+  background: radial-gradient(circle at 50% 46%, #f5eedc, #d6c18f);
+  color: #927b44;
+}
+.art-teal {
+  background: radial-gradient(circle at 50% 45%, #ddf0eb, #a8d1c7);
+  color: #508b80;
+}
+.nft-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px 7px;
+}
+.nft-info > div {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
+.nft-name {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  font-size: 9px;
+  font-weight: 600;
+}
+.nft-info small {
+  color: #8f9098;
+  font-size: 7px;
+}
+.favorite {
+  border: 0;
+  background: none;
+  color: #a0a0a7;
+  font-size: 15px;
+}
+.favorite-on {
+  border: 0;
+  background: none;
+  color: #d4778b;
+  font-size: 15px;
+}
+.nft-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-top: 1px solid #f0f0f2;
+}
+.nft-price span {
+  color: #a0a1a7;
+  font:
+    6px "DM Mono",
+    monospace;
+  letter-spacing: 0.4px;
+}
+.nft-price b {
+  font:
+    9px "DM Mono",
+    monospace;
+  color: #54555d;
+}
+.buy-button {
+  width: calc(100% - 20px);
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px 10px;
+  padding: 7px 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  background: white;
+  color: #7060a7;
+  text-align: left;
+  font-size: 8px;
+}
+.empty-market {
+  padding: 35px;
+  border: 1px dashed var(--line);
+  color: #898a92;
+  text-align: center;
+  font-size: 9px;
+}
+.mint-footer {
+  max-width: 1042px;
+  margin: auto;
+  padding: 14px 2px 20px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  color: #9a9ba1;
+  font:
+    7px "DM Mono",
+    monospace;
+  letter-spacing: 0.5px;
+}
+.mint-modal-backdrop {
+  position: fixed;
+  z-index: 5;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: #17162588;
+}
+.nft-detail,
+.create-modal {
+  position: relative;
+  width: min(830px, 100%);
+  max-height: 90vh;
+  overflow: auto;
+  border-radius: 7px;
+  background: white;
+  box-shadow: 0 18px 60px #0e0d1838;
+}
+.nft-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.detail-art {
+  min-height: 390px;
+  display: grid;
+  place-items: center;
+}
+.detail-art span {
+  font:
+    110px "Playfair Display",
+    Georgia,
+    serif;
+}
+.detail-copy {
+  padding: 35px 29px;
+}
+.detail-copy h2 {
+  margin: 10px 0 5px;
+  font:
+    500 27px "Playfair Display",
+    Georgia,
+    serif;
+}
+.detail-copy p {
+  color: #777880;
+  font-size: 9px;
+  line-height: 1.8;
+}
+.detail-copy p b {
+  color: #4b4c53;
+}
+.detail-attributes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  margin: 17px 0;
+}
+.detail-attributes span {
+  display: grid;
+  gap: 4px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: #96979f;
+  font-size: 7px;
+}
+.detail-attributes b {
+  color: #55565e;
+  font-size: 8px;
+}
+.detail-price {
+  display: grid;
+  gap: 4px;
+  padding-top: 11px;
+  border-top: 1px solid var(--line);
+}
+.detail-price small {
+  color: #999aa1;
+  font:
+    7px "DM Mono",
+    monospace;
+}
+.detail-price strong {
+  font:
+    17px "DM Mono",
+    monospace;
+}
+.connect-button.wide {
+  width: 100%;
+  margin-top: 14px;
+}
+.mint-close {
+  position: absolute;
+  z-index: 1;
+  right: 12px;
+  top: 8px;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 50%;
+  background: #ffffffcf;
+  color: #555;
+  font-size: 20px;
+}
+.create-modal {
+  width: min(440px, 100%);
+  padding: 25px;
+}
+.create-modal h2 {
+  margin: 9px 0;
+  font:
+    500 24px "Playfair Display",
+    Georgia,
+    serif;
+}
+.create-modal > p {
+  color: #7f8088;
+  font-size: 9px;
+  line-height: 1.7;
+}
+.create-modal > label {
+  display: grid;
+  gap: 6px;
+  margin: 13px 0;
+  color: #62636b;
+  font-size: 8px;
+}
+.create-modal input:not([type="file"]),
+.create-modal textarea {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  outline-color: #a9a0ce;
+  font-size: 9px;
+}
+.create-modal textarea {
+  resize: vertical;
+}
+.create-modal .upload-label {
+  padding: 13px;
+  border: 1px dashed #dedee4;
+  border-radius: 4px;
+  color: #85868d;
+}
+.create-modal input[type="file"] {
+  font-size: 8px;
+}
+.create-modal .wide {
+  margin-top: 5px;
+}
+.mint-toast {
+  position: fixed;
+  z-index: 7;
+  right: 17px;
+  bottom: 17px;
+  max-width: 370px;
+  padding: 11px 35px 11px 13px;
+  border-radius: 5px;
+  background: #292a31;
+  color: white;
+  font-size: 9px;
+  box-shadow: 0 8px 28px #17172040;
+}
+.mint-toast button {
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  border: 0;
+  background: none;
+  color: white;
+  font-size: 18px;
+}
+@media (max-width: 1000px) {
+  .mint-header {
+    padding: 0 17px;
+    gap: 20px;
+  }
+  .chain-disclosure {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .mint-hero {
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 30px;
+  }
+  .collection-strip,
+  .market-section,
+  .mint-footer {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .nft-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 650px) {
+  .mint-header {
+    height: 54px;
+    padding: 0 11px;
+    gap: 12px;
+  }
+  .mint-brand {
+    font-size: 8px;
+    gap: 5px;
+  }
+  .mint-brand span {
+    font-size: 15px;
+  }
+  .mint-header nav {
+    gap: 9px;
+  }
+  .mint-header nav button {
+    font-size: 7px;
+    padding: 0 2px;
+  }
+  .mint-search {
+    display: none;
+  }
+  .connect-button {
+    padding: 7px;
+    font-size: 7px;
+  }
+  .chain-disclosure {
+    margin: 9px 9px 0;
+    font-size: 7px;
+    line-height: 1.5;
+  }
+  .chain-disclosure span {
+    display: block;
+    margin-bottom: 3px;
+  }
+  .mint-hero {
+    height: 240px;
+    margin: 9px 9px 0;
+    padding: 22px;
+    grid-template-columns: 1fr 110px;
+  }
+  .mint-hero h1 {
+    font-size: 35px;
+  }
+  .mint-hero p {
+    font-size: 8px;
+    max-width: 220px;
+  }
+  .hero-art {
+    height: 170px;
+    transform: scale(0.75);
+    transform-origin: center;
+  }
+  .hero-orbit {
+    width: 150px;
+    height: 150px;
+  }
+  .orbit-b {
+    width: 180px;
+    height: 70px;
+  }
+  .hero-sun {
+    width: 55px;
+    height: 55px;
+  }
+  .collection-strip {
+    margin: 11px 10px 0;
+    padding: 8px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .collection-strip > div {
+    min-width: 100%;
+    flex: 1;
+  }
+  .collection-strip > span {
+    font-size: 7px;
+  }
+  .collection-strip > button {
+    margin-left: auto;
+    font-size: 7px;
+  }
+  .market-section {
+    margin: 27px 10px 0;
+    padding-bottom: 30px;
+  }
+  .market-heading h2 {
+    font-size: 19px;
+  }
+  .create-button {
+    padding: 7px;
+    font-size: 11px;
+  }
+  .create-button span {
+    font-size: 7px;
+  }
+  .category-tabs {
+    gap: 11px;
+    overflow: auto;
+  }
+  .category-tabs button {
+    font-size: 7px;
+    white-space: nowrap;
+  }
+  .market-tools {
+    gap: 8px;
+  }
+  .sort-select {
+    font-size: 6px;
+    white-space: nowrap;
+  }
+  .sort-select select {
+    max-width: 86px;
+    font-size: 7px;
+  }
+  .nft-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .nft-art {
+    height: 135px;
+  }
+  .nft-art > span {
+    font-size: 52px;
+  }
+  .nft-info {
+    padding: 8px;
+  }
+  .nft-name {
+    font-size: 8px;
+  }
+  .nft-price {
+    padding: 7px 8px;
+  }
+  .nft-price span {
+    font-size: 5px;
+  }
+  .nft-price b {
+    font-size: 8px;
+  }
+  .buy-button {
+    width: calc(100% - 16px);
+    margin: 0 8px 8px;
+  }
+  .mint-footer {
+    margin: 0 10px;
+    gap: 10px;
+    font-size: 6px;
+  }
+  .nft-detail {
+    grid-template-columns: 1fr;
+    max-width: 430px;
+  }
+  .detail-art {
+    min-height: 200px;
+  }
+  .detail-art span {
+    font-size: 75px;
+  }
+  .detail-copy {
+    padding: 20px;
+  }
+  .detail-copy h2 {
+    font-size: 22px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
